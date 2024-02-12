@@ -88,3 +88,29 @@ header img {
     margin-right: 150px;
     margin-top: 20px;
 }
+
+@media only screen and (max-width: 768px) {
+    body{
+        float: none;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        display: grid;
+    }
+    .header-content{
+        text-align: center;
+        justify-content: center;
+        align-self: center;
+    }
+    .header-content img{
+        width: 200px;
+        margin-bottom: 0;
+    }
+    article{
+        justify-content: center;
+        align-self: center;
+        margin-right: 190px;
+        margin-top: 30px;
+    }
+}
