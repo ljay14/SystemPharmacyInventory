@@ -1,11 +1,44 @@
+@media only screen and (max-width: 768px) {
+    body{
+        float: inline-start;
+    }
+    
+    body header .header-content{
+        text-align: center;
+        height: 80vh;
+    }
+
+    .header-content #logo h1{
+        font-size: 30px;
+    }
+
+    .header-content #logo h2{
+        font-size: 15px;
+    }
+
+    .header-content {
+        margin-left: 40px;
+    }
+    .header-content img{
+        display: flex;
+        width: 200px;
+    }
+
+    article{
+        width: 100%;
+        box-sizing: border-box; 
+        padding: 20px; 
+    }
+}
+
 body {
     font-family: 'Courier New', Courier, monospace;
     background-color: #f4f4f4;
-    display: flex;
     align-items: center;
     justify-content: center;
     height: 90vh;
-    margin: 0;
+    flex-direction: row;
+    display: flex;
 }
 
 a {
@@ -14,7 +47,7 @@ a {
 }
 
 .header-content img{
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     margin-top: 0;
 }
 
@@ -31,10 +64,18 @@ a {
 }
 
 header img {
-    width: 300px;
+    width: 260px;
     border-radius: 100%;
     display: block; 
     margin: 0 auto; 
+}
+
+main{
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
+    margin-left: 200px;
+    
 }
 
 #login {
@@ -44,7 +85,7 @@ header img {
     height: 400px;
     display: inline-flex;
     flex-direction: column;
-    margin-left: 200px;
+
 }
 
 #login h1 {
@@ -89,28 +130,19 @@ header img {
     margin-top: 20px;
 }
 
-@media only screen and (max-width: 768px) {
-    body{
-        float: none;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: auto;
-        display: grid;
-    }
-    .header-content{
-        text-align: center;
-        justify-content: center;
-        align-self: center;
-    }
-    .header-content img{
-        width: 200px;
-        margin-bottom: 0;
-    }
-    article{
-        justify-content: center;
-        align-self: center;
-        margin-right: 190px;
-        margin-top: 30px;
-    }
+.password-container {
+    position: relative;
+    width: fit-content;
+}
+
+.show-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.show-password i {
+    color: #555;
 }

@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pharmacy Inventory</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleforlogin.css">
+    <script src="scriptforlogin.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
 </head>
 
 <body>
@@ -18,17 +22,27 @@
             </div>
         </div>
     </header>
-    <article >
-        <section id="login">
-            <h1>Login</h1>
-            <label for="username">Username:</label>
-            <input type="text" name="Username" id="username" required>
-            <label for="password">Password:</label>
-            <input type="password" name="passowrd" id="password" required>
-            <button type="button" onclick="validatelogin()">Login</button>
-            <a href="">Create Accout?</a>
-        </section>
-    </article>
-</main>
+    <main>
+        <article>
+            <section id="login">
+                <h1>Login</h1>
+                <label for="username">Username:</label>
+                <input type="text" name="Username" id="username" required>
+                <label for="password">Password:</label>
+                <div class="password-container">
+                    <input type="password" name="password" id="password" required>
+                    <span class="show-password" onclick="togglePasswordVisibility('password', this)">
+                        <i class="fas fa-eye"></i>
+                    </span>
+                </div>
+                <button type="button" onclick="validatelogin()">Login</button>
+                <a href="register.html">Create Account?</a>
+            </section>
+        </article>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"
+        integrity="sha512-8A4V/1d19CnU3dNvivYnXoOX7l5C3DEouXfbU5eg6jNlYU9e3//zWfgJZVa8f2GpQszp2faXjfG0Z9e0g7FfFQ=="
+        crossorigin="anonymous"></script>
+    </main>
 </body>
 </html>
+
