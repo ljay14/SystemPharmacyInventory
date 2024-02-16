@@ -1,30 +1,8 @@
 @media screen and (max-width: 768px) {
     body {
-        grid-template-columns: 1fr; 
-        margin: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     }
 
-    header {
-        grid-template-columns: 1fr; 
-    }
-
-    #login {
-        width: 100%;
-    }
-
-    #login h1 {
-        font-size: 30px; 
-        margin-bottom: 20px; 
-    }
-
-    #login input {
-        width: 80%; 
-    }
-
-    #login button {
-        width: 80%;
-        margin-top: 10px; 
-    }
 }
 
 body {
