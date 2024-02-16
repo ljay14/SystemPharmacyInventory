@@ -1,0 +1,30 @@
+body{
+    float: inline-start;
+}
+
+body header .header-content{
+    text-align: center;
+    height: 80vh;
+}
+
+.header-content #logo h1{
+    font-size: 30px;
+}
+
+.header-content #logo h2{
+    font-size: 15px;
+}
+
+.header-content {
+    margin-left: 40px;
+}
+.header-content img{
+    display: flex;
+    width: 200px;
+}
+
+article{
+    width: 100%;
+    box-sizing: border-box; 
+    padding: 20px; 
+}

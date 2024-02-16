@@ -1,33 +1,29 @@
-@media only screen and (max-width: 768px) {
-    body{
-        float: inline-start;
-    }
-    
-    body header .header-content{
-        text-align: center;
-        height: 80vh;
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr; 
+        margin: 20px;
     }
 
-    .header-content #logo h1{
-        font-size: 30px;
+    header {
+        grid-template-columns: 1fr; 
     }
 
-    .header-content #logo h2{
-        font-size: 15px;
-    }
-
-    .header-content {
-        margin-left: 40px;
-    }
-    .header-content img{
-        display: flex;
-        width: 200px;
-    }
-
-    article{
+    #login {
         width: 100%;
-        box-sizing: border-box; 
-        padding: 20px; 
+    }
+
+    #login h1 {
+        font-size: 30px; 
+        margin-bottom: 20px; 
+    }
+
+    #login input {
+        width: 80%; 
+    }
+
+    #login button {
+        width: 80%;
+        margin-top: 10px; 
     }
 }
 
@@ -35,10 +31,11 @@ body {
     font-family: 'Courier New', Courier, monospace;
     background-color: #f4f4f4;
     align-items: center;
-    justify-content: center;
-    height: 90vh;
-    flex-direction: row;
-    display: flex;
+    height: 70vh;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(100%, 1fr));
+    grid-template-columns:  1fr 0fr;
+    margin: 100px;
 }
 
 a {
@@ -46,88 +43,74 @@ a {
     color: black;
 }
 
-.header-content img{
-    margin-bottom: 60px;
-    margin-top: 0;
+header {
+    display: grid;
+    justify-self: baseline;
 }
 
 #logo h1 {
     color: maroon;
     font-size: 50px;
-    margin: 0; 
+    margin: 0;
 
 }
 
 #logo h2 {
     font-size: 20px;
-    margin: 0; 
+    margin: 0;
 }
 
 header img {
     width: 260px;
     border-radius: 100%;
-    display: block; 
-    margin: 0 auto; 
+    display: grid;
+    margin: 0 auto;
 }
 
-main{
-    flex-direction: row;
-    align-items: end;
-    justify-content: end;
-    margin-left: 200px;
-    
-}
 
 #login {
     box-shadow: 0 0px 20px;
     border-radius: 20px;
-    width: 500px;
-    height: 400px;
-    display: inline-flex;
-    flex-direction: column;
-
+    width: 540px;
+    height: 380px;
+    display: grid;
+    justify-content: center;
+    
 }
 
 #login h1 {
     text-align: center;
-    margin-bottom: 60px;
     font-size: 50px;
     margin-top: 10px;
     color: maroon;
+    margin-bottom: 50px;
 }
 
 #login input {
     width: 270px;
-    height: 20px;
-    display: flex;
+    height: 27px;
+    border-radius: 20px;
+    border: 1px solid;
 }
 
-#login input,
-#login label,
-#login button {
-    margin-left: 110px;
+#login input::placeholder{
+    padding-left: 16px;
 }
 
 #login button {
-    margin-left: 290px;
+    justify-self: last baseline;
     width: 100px;
     height: 30px;
     border: 1px solid;
     border-radius: 10px;
-    text-align: center;
-    align-items: end;
-    justify-content: end;
-    margin-top: 20px;
+    margin-top: 0px;
+    cursor: pointer;
 }
 
-#login label {
-    margin-top: 20px;
-}
+
 
 #login a {
-    text-align: center;
-    margin-right: 150px;
-    margin-top: 20px;
+    justify-self: baseline;
 }
 
 .password-container {
@@ -137,8 +120,8 @@ main{
 
 .show-password {
     position: absolute;
-    top: 50%;
-    right: 10px;
+    top: 23%;
+    right: 9px;
     transform: translateY(-50%);
     cursor: pointer;
 }
