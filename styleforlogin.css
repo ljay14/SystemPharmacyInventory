@@ -63,6 +63,9 @@
     border: 1px solid;
     width: 250px;
     display: grid;
+}
+
+.right-container #username{
     margin-bottom: 20px;
 }
 
@@ -74,9 +77,6 @@
     position: relative;
 }
 
-#password {
-    padding-right: 30px; 
-}
 
 #togglePassword {
     position: absolute;
@@ -93,7 +93,7 @@
 .login-button button{
     border-radius: 20px;
     border: 1px solid;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-top: 20px;
     height: 40px;
     width: 80px;
