@@ -1,109 +1,128 @@
-@media screen and (max-width: 768px) {
-    body {
-        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+@media only screen and (max-width: 768px) {
+    header, nav{
+        float: none;
+        text-align: center;
+        width: 100%;
     }
-
 }
 
-body {
+
+
+.container {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-top: 100px;
     font-family: 'Courier New', Courier, monospace;
-    background-color: #f4f4f4;
+}
+
+.left-container{
+    display: grid;
+    justify-items: center;
+}
+
+
+
+.col img{
+    width: 300px;
+    height: 300px;
     align-items: center;
-    height: 70vh;
-    display: grid;
-    grid-template-rows: repeat(auto-fill, minmax(100%, 1fr));
-    grid-template-columns:  1fr 0fr;
-    margin: 100px;
+   
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
-
-header {
-    display: grid;
-    justify-self: baseline;
-}
-
-#logo h1 {
+.left-container h1{
     color: maroon;
     font-size: 50px;
-    margin: 0;
-
 }
 
-#logo h2 {
-    font-size: 20px;
-    margin: 0;
+.left-container h2{
+    font-weight: 400;
+    font-size: 23px;
+    margin-top: 0px;
 }
 
-header img {
-    width: 260px;
-    border-radius: 100%;
+.right-container{
+    box-shadow: 0 1px 20px;
     display: grid;
-    margin: 0 auto;
-}
-
-
-#login {
-    box-shadow: 0 0px 20px;
+    justify-self: center;
+    width: 400px;
     border-radius: 20px;
-    width: 540px;
-    height: 380px;
-    display: grid;
     justify-content: center;
-    
 }
 
-#login h1 {
+.right-container h1{
+    margin-bottom: 70px;
     text-align: center;
+    color: maroon;
     font-size: 50px;
     margin-top: 10px;
-    color: maroon;
-    margin-bottom: 50px;
 }
 
-#login input {
-    width: 270px;
-    height: 27px;
+.right-container #username, .right-container #password{
     border-radius: 20px;
     border: 1px solid;
+    width: 250px;
+    display: grid;
+    margin-bottom: 20px;
 }
 
-#login input::placeholder{
-    padding-left: 16px;
-}
-
-#login button {
-    justify-self: last baseline;
-    width: 100px;
-    height: 30px;
-    border: 1px solid;
-    border-radius: 10px;
-    margin-top: 0px;
-    cursor: pointer;
-}
-
-
-
-#login a {
-    justify-self: baseline;
+.right-container input::placeholder{
+    padding-left: 10px;
 }
 
 .password-container {
     position: relative;
-    width: fit-content;
 }
 
-.show-password {
+#password {
+    padding-right: 30px; 
+}
+
+#togglePassword {
     position: absolute;
-    top: 23%;
-    right: 9px;
+    top: 50%;
+    right: 10px;
     transform: translateY(-50%);
     cursor: pointer;
 }
 
-.show-password i {
-    color: #555;
+#togglePassword:hover {
+    color: rgb(138, 32, 32); 
 }
+
+.login-button button{
+    border-radius: 20px;
+    border: 1px solid;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    height: 40px;
+    width: 80px;
+    
+}
+
+.right-container .login-button{
+    text-align: right;
+}
+
+.login-button button:hover{
+    background-color: maroon;
+    color: white;
+}
+
+.createaccount a {
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+    text-align: right;
+    align-items: end;
+    justify-content: right;
+}
+
+.createaccount a:hover{
+    color: maroon;
+}
+
+.right-container input:hover{
+    padding-left: 20px;
+}
+

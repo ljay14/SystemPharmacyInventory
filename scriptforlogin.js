@@ -1,12 +1,11 @@
 // script.js
-function togglePasswordVisibility(inputId, icon) {
-    const passwordInput = document.getElementById(inputId);
+document.addEventListener('DOMContentLoaded', function () {
+    const passwordInput = document.getElementById('password');
+    const togglePasswordButton = document.getElementById('togglePassword');
 
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        icon.innerHTML = '<i class="fas fa-eye-slash"></i>';
-    } else {
-        passwordInput.type = 'password';
-        icon.innerHTML = '<i class="fas fa-eye"></i>';
-    }
-}
+    togglePasswordButton.addEventListener('click', function () {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        togglePasswordButton.classList.toggle('fa-eye-slash');
+    });
+});

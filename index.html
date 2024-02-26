@@ -6,41 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pharmacy Inventory</title>
     <link rel="stylesheet" href="styleforlogin.css">
-    <script src="scriptforlogin.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
 </head>
 
 <body>
-    <header>
-        <div class="header-content">
-            <img src="logo/logo.jpg" alt="logo">
-            <div id="logo">
-                <h1>Pharmacy Inventory</h1>
-                <h2>Save or Update Your Product Here!</h2>
+    <div class="container">
+        <div class="left-container">
+            <div class="row">
+                <div class="col">
+                    <img src="logo/logo.jpg" alt="logo">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h1>Pharmacy Inventory</h1>
+                    <h2>Save or Update Your Product Here!</h2>
+                </div>
             </div>
         </div>
-    </header>
-    <main>
-        <article>
-            <section id="login">
-                <h1>Login</h1>
-                <input type="text" name="Username" id="username" placeholder="Username" required>
-                <div class="password-container">
-                    <input type="password" name="password" id="password" placeholder="Password"  required>
-                    <span class="show-password" onclick="togglePasswordVisibility('password', this)">
-                        <i class="fas fa-eye"></i>
-                    </span>
+        <!-- ... (previous HTML code) ... -->
+        <div class="right-container">
+            <div class="row">
+                <div class="col">
+                    <h1>Login</h1>
+                    <input type="text" id="username" name="username" placeholder="User Name">
+                    <div class="password-container">
+                        <input type="password" name="password" id="password" placeholder="Password">
+                        <i class="fas fa-eye" id="togglePassword"></i>
+                    </div>
                 </div>
-                <button type="button" onclick="validatelogin()">Login</button>
-                <a href="register.html">Create Account?</a>
-            </section>
-        </article>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"
-        integrity="sha512-8A4V/1d19CnU3dNvivYnXoOX7l5C3DEouXfbU5eg6jNlYU9e3//zWfgJZVa8f2GpQszp2faXjfG0Z9e0g7FfFQ=="
-        crossorigin="anonymous"></script>
-    </main>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="login-button">
+                        <button>
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="createaccount">
+                        <a href="">
+                            Create Account?
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <script defer src="scriptforlogin.js"></script>
+        </div>
+    </div>
 </body>
-</html>
 
+</html>
