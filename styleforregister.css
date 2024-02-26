@@ -1,0 +1,121 @@
+@media only screen and (max-width: 768px) {
+    header, nav{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
+
+.container {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-top: 100px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.left-container{
+    display: grid;
+    justify-items: center;
+}
+
+
+
+.col img{
+    width: 300px;
+    height: 300px;
+    align-items: center;
+   
+}
+
+.left-container h1{
+    color: maroon;
+    font-size: 50px;
+}
+
+.left-container h2{
+    font-weight: 400;
+    font-size: 23px;
+    margin-top: 0px;
+}
+
+.right-container{
+    box-shadow: 0 1px 20px;
+    display: grid;
+    justify-self: center;
+    width: 400px;
+    border-radius: 20px;
+    justify-content: center;
+    
+}
+
+.right-container h1{
+    margin-bottom: 70px;
+    text-align: center;
+    color: maroon;
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+.right-container #username, .right-container #password{
+    border-radius: 20px;
+    border: 1px solid;
+    width: 250px;
+    display: grid;
+}
+
+.right-container #username{
+    margin-bottom: 20px;
+}
+
+.right-container input::placeholder{
+    padding-left: 10px;
+}
+
+.password-container {
+    position: relative;
+}
+
+
+#togglePassword {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#togglePassword:hover {
+    color: rgb(138, 32, 32); 
+}
+
+.login-button button{
+    border-radius: 20px;
+    border: 1px solid;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 40px;
+    width: 80px;
+    
+}
+
+.right-container .login-button{
+    text-align: right;
+}
+
+.login-button button:hover{
+    background-color: maroon;
+    color: white;
+}
+
+
+.right-container input:hover{
+    padding-left: 20px;
+}
+
+.right-container a{
+    text-decoration: none;
+    color: black;
+}
