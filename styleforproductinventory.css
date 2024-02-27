@@ -42,3 +42,38 @@ nav a {
     align-items: center;
     font-size: 12px;
 }
+
+
+
+.container{
+    display: grid;
+    text-align: center;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+th{
+    text-align: center;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+.search-bar{
+    text-align: left;
+}
+
+.search-bar input{
+    width: 30%;
+}
