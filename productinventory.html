@@ -10,12 +10,14 @@
 
 <body>
     <header>
+       
         <h1>Product Inventory</h1>
         <nav>
             <ul>
-                <a href="#">Profile</a>
+                <a href="profile.html">Profile</a>
             </ul>
         </nav>
+        <a href="">Logout</a>
     </header>
 
     <div class="container">
@@ -42,7 +44,6 @@
         <br>
         <br>
         <table>
-            <thead>
                 <tr>
                     <th>Id</th>
                     <th>Product Name</th>
@@ -51,15 +52,12 @@
                     <th>Expire Date</th>
                     <th>Action</th>
                 </tr>
-            </thead>
             <tbody id="productTableBody">
                 <tr>
                     <td><button onclick="buyProduct(1)">Buy</button></td>
                 </tr>
             </tbody>
         </table>
-
-       
     </div>
 
     <script src="productinventory.js"></script>

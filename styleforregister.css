@@ -23,11 +23,10 @@
 
 
 
-.col img{
+.left-container .col img{
     width: 300px;
     height: 300px;
     align-items: center;
-   
 }
 
 .left-container h1{
@@ -48,27 +47,26 @@
     width: 400px;
     border-radius: 20px;
     justify-content: center;
-    
+    height: 450px;
 }
 
 .right-container h1{
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     text-align: center;
     color: maroon;
     margin-top: 10px;
     font-size: 40px;
+    
 }
 
-.right-container #username, .right-container #password{
+.right-container input{
     border-radius: 20px;
     border: 1px solid;
     width: 250px;
     display: grid;
+    margin-bottom: 10px;
 }
 
-.right-container #username{
-    margin-bottom: 20px;
-}
 
 .right-container input::placeholder{
     padding-left: 10px;
@@ -94,11 +92,8 @@
 .login-button button{
     border-radius: 20px;
     border: 1px solid;
-    margin-bottom: 20px;
-    margin-top: 20px;
     height: 40px;
     width: 80px;
-    
 }
 
 .right-container .login-button{
@@ -112,7 +107,7 @@
 
 
 .right-container input:hover{
-    padding-left: 20px;
+    padding-left: 5px;
 }
 
 .right-container a{

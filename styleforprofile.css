@@ -18,3 +18,23 @@ header h1 {
     text-align: center;
     align-items: center;
 }
+
+.container{
+    display: grid;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.container .row{
+    box-shadow: 0 1px 50px;
+    width: 450px;
+    height: 400px;
+    border-radius: 20px;
+    justify-content: left;
+    align-items: center;
+    display: grid;
+}
+
+.container h3{
+   padding: 16px;
+}

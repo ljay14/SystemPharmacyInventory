@@ -1,5 +1,8 @@
 @media only screen and (max-width: 768px) {
-    body, header, nav {
+
+    body,
+    header,
+    nav {
         float: none;
         text-align: center;
         width: 100%;
@@ -13,7 +16,7 @@ body {
 
 header {
     display: grid;
-    grid-template-columns: 1fr auto; 
+    grid-template-columns: 1fr auto;
     box-shadow: 0 1px 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -45,7 +48,7 @@ nav a {
 
 
 
-.container{
+.container {
     display: grid;
     text-align: center;
     margin-top: 50px;
@@ -53,7 +56,7 @@ nav a {
     margin-left: 50px;
 }
 
-table{
+table {
     border-collapse: collapse;
     width: 100%;
 }
@@ -64,16 +67,28 @@ td {
     padding: 10px;
 }
 
-th{
+th {
     text-align: center;
     border: 1px solid;
     border-collapse: collapse;
 }
 
-.search-bar{
+.search-bar {
     text-align: left;
 }
 
-.search-bar input{
+.search-bar input {
     width: 30%;
+}
+
+
+tbody button:hover{
+    background-color: maroon;
+    color: white;
+}
+
+tbody button{
+    border-radius: 10px;
+    width: 50px;
+    border: 1px solid;
 }
