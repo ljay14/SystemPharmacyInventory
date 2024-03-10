@@ -19,6 +19,17 @@
 </head>
 
 <body>
+
+    <?php 
+    include("php/config.php");
+    if(isset($_POST['sumbit'])){
+        $fullname = $_POST['fullname'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $age = $_POST['age'];
+    }
+    ?>
+
     <div class="container">
         <div class="left-container">
             <div class="row">

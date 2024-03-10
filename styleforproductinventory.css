@@ -16,7 +16,7 @@ body {
 
 header {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 3fr 0fr;
     box-shadow: 0 1px 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -28,6 +28,26 @@ header h1 {
     height: 30px;
     text-align: center;
     align-items: center;
+}
+
+body a{
+    display: grid;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 1px 20px;
+    width: 80px;
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin-top: 20px;
+}
+
+.logout{
+    display: grid;
+    justify-content: right;
+    margin-right: 20px;
 }
 
 nav a {

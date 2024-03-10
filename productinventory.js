@@ -128,3 +128,6 @@ function buyProduct(productId, row) {
         }
     }
 }
+
+updateTable();
+

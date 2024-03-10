@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }else{
             window.alert("Successfully Created");
-            window.location.href = "index.html";
+            window.location.href = "index.php";
         }
 
         console.log("Full Name: " + fullnameValue);
