@@ -1,31 +1,31 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const passwordInput = document.getElementById('password');
-    const togglePasswordButton = document.getElementById('togglePassword');
-    const createButton = document.querySelector('.login-button button');
-    const fullnameInput = document.getElementById('fullname');
-    const usernameInput = document.getElementById('username');
-    const ageInput = document.getElementById('age');
+document.addEventListener("DOMContentLoaded", function () {
 
-    togglePasswordButton.addEventListener('click', function () {
-        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-        passwordInput.setAttribute('type', type);
-        togglePasswordButton.classList.toggle('fa-eye-slash');
-    });
+    var fullnameInput = document.getElementById("fullname");
+    var usernameInput = document.getElementById("username");
+    var passwordInput = document.getElementById("password");
+    var ageInput = document.getElementById("age");
+    var createButton = document.querySelector(".login-button button");
 
-    createButton.addEventListener('click', function () {
-        const fullname = fullnameInput.value;
-        const username = usernameInput.value;
-        const password = passwordInput.value;
-        const age = ageInput.value;
+    // Add an event listener to the create button
+    createButton.addEventListener("click", function () {
 
-        // Store the account information in local storage
-        const userAccounts = JSON.parse(localStorage.getItem('userAccounts')) || [];
-        userAccounts.push({ fullname, username, password, age });
-        localStorage.setItem('userAccounts', JSON.stringify(userAccounts));
+        var fullnameValue = fullnameInput.value.trim();
+        var usernameValue = usernameInput.value.trim();
+        var passwordValue = passwordInput.value.trim();
+        var ageValue = ageInput.value.trim();
 
-        // You can redirect to the login page or perform other actions as needed
-        alert('Account created successfully!');
+
+        if (fullnameValue === "" || usernameValue === "" || passwordValue === "" || ageValue === "") {
+            alert("Please fill in all fields.");
+            return;
+        }else{
+            window.alert("Successfully Created");
+            window.location.href = "index.html";
+        }
+
+        console.log("Full Name: " + fullnameValue);
+        console.log("Username: " + usernameValue);
+        console.log("Password: " + passwordValue);
+        console.log("Age: " + ageValue);
     });
 });
-
-
