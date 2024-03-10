@@ -10,7 +10,6 @@
 
 <body>
     <header>
-       
         <h1>Product Inventory</h1>
         <nav>
             <ul>
@@ -39,27 +38,24 @@
 
             <label for="expireDate">Expire Date:</label>
             <input type="text" id="expireDate" required>
-            <button type="button" onclick="addProduct()">Add Product</button>
+            <button type="submit" onclick="addProduct()">Add Product</button>
         </form>
         <br>
         <br>
         <table>
-                <tr>
-                    <th>Id</th>
-                    <th>Product Name</th>
-                    <th>Quantity</th>
-                    <th>Unit Price</th>
-                    <th>Expire Date</th>
-                    <th>Action</th>
-                </tr>
+            <tr>
+                <th>Id</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Expire Date</th>
+                <th>Action</th>
+            </tr>
             <tbody id="productTableBody">
-                <tr>
-                    <td><button onclick="buyProduct(1)">Buy</button></td>
-                </tr>
+                <!-- Existing row for the Buy button -->
             </tbody>
         </table>
     </div>
-
     <script src="productinventory.js"></script>
 </body>
 

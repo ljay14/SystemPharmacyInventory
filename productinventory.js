@@ -1,5 +1,6 @@
 let productIdCounter = 1; // Initial ID counter
 const products = []; // Array to store products
+const rowMap = {};
 
 function addProduct() {
     const productName = document.getElementById("productName").value;
@@ -45,7 +46,7 @@ function addProduct() {
     const buyButton = document.createElement("button");
     buyButton.textContent = "Buy";
     buyButton.onclick = function () {
-        buyProduct(productId);
+        buyProduct(productId, newRow);
     };
     actionCell.appendChild(buyButton);
 
@@ -70,11 +71,11 @@ function filterProducts() {
 function updateTable(productsToDisplay = products) {
     const tableBody = document.getElementById("productTableBody");
     // Clear existing rows
-    tableBody.innerHTML = "";
+    tableBody.innerHTML = " ";
 
     // Re-populate the table with product information
     productsToDisplay.forEach(product => {
-        const newRow = tableBody.insertRow(-1);
+        const newRow = tableBody.insertRow(0);
         const idCell = newRow.insertCell(0);
         const nameCell = newRow.insertCell(1);
         const quantityCell = newRow.insertCell(2);
@@ -96,8 +97,34 @@ function updateTable(productsToDisplay = products) {
         };
         actionCell.appendChild(buyButton);
     });
+
+
 }
 
 
-// Initial population of the table
 updateTable();
+
+
+function buyProduct(productId, row) {
+    const productIndex = products.findIndex(product => product.id === productId);
+
+    if (productIndex !== -1) {
+        const availableQuantity = products[productIndex].quantity;
+        const quantityToBuy = prompt(`How many ${products[productIndex].name}(s) would you like to buy?`, 1);
+
+        if (quantityToBuy !== null && !isNaN(quantityToBuy) && quantityToBuy > 0 && quantityToBuy <= availableQuantity) {
+
+            if(products[productIndex].quantity -= quantityToBuy){
+                row.remove();
+            }
+
+            // Filter out products with quantity > 0 before updating the table
+            const remainingProducts = products.filter(product => product.quantity > 0);
+            updateTable(remainingProducts);
+
+            alert(`You successfully bought ${quantityToBuy} ${products[productIndex].name}(s)!`);
+        } else if (quantityToBuy !== null) {
+            alert("Invalid quantity or quantity exceeds available stock!");
+        }
+    }
+}
