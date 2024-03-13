@@ -45,9 +45,11 @@ function addProduct() {
     // Add Buy button with event listener
     const buyButton = document.createElement("button");
     buyButton.textContent = "Buy";
-    buyButton.onclick = function () {
-        buyProduct(productId, newRow);
-    };
+    buyButton.onclick = function (id, row) {
+        return function () {
+            buyProduct(id, row);
+        };
+    }(productId, newRow);
     actionCell.appendChild(buyButton);
 
     // Clear the input fields
@@ -89,6 +91,7 @@ function updateTable(productsToDisplay = products) {
         priceCell.textContent = product.price;
         dateCell.textContent = product.expireDate;
 
+
         // Add Buy button with event listener
         const buyButton = document.createElement("button");
         buyButton.textContent = "Buy";
@@ -97,7 +100,6 @@ function updateTable(productsToDisplay = products) {
         };
         actionCell.appendChild(buyButton);
     });
-
 
 }
 
@@ -113,14 +115,14 @@ function buyProduct(productId, row) {
         const quantityToBuy = prompt(`How many ${products[productIndex].name}(s) would you like to buy?`, 1);
 
         if (quantityToBuy !== null && !isNaN(quantityToBuy) && quantityToBuy > 0 && quantityToBuy <= availableQuantity) {
+            products[productIndex].quantity -= quantityToBuy;
 
-            if(products[productIndex].quantity -= quantityToBuy){
+            if (products[productIndex].quantity <= 0) {
                 row.remove();
+            } else {
+                // Update quantity cell in the table
+                row.cells[2].textContent = products[productIndex].quantity;
             }
-
-            // Filter out products with quantity > 0 before updating the table
-            const remainingProducts = products.filter(product => product.quantity > 0);
-            updateTable(remainingProducts);
 
             alert(`You successfully bought ${quantityToBuy} ${products[productIndex].name}(s)!`);
         } else if (quantityToBuy !== null) {
@@ -128,6 +130,3 @@ function buyProduct(productId, row) {
         }
     }
 }
-
-updateTable();
-
