@@ -7,8 +7,17 @@ document.addEventListener('DOMContentLoaded', function () {
             const passwordInput = document.getElementById('password').value;
 
             if (validateUser(usernameInput, passwordInput)) {
-                alert('Login successful!');
-                window.location.href = "productinventory.html";
+                const userDataString = localStorage.getItem(usernameInput);
+                if (userDataString) {
+                    const userData = JSON.parse(userDataString);
+                    localStorage.setItem('currentUser', JSON.stringify(userData));
+                    console.log("User data stored:", userData);
+
+                    alert('Login successful!');
+                    window.location.href = "productinventory.html";
+                } else {
+                    alert('User data not found. Please try again.');
+                }
             } else {
                 alert('Invalid Username or Password. Please try again!');
             }
@@ -17,8 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function validateUser(username, password) {
-    
     const storedPassword = localStorage.getItem(username);
-
     return storedPassword === password;
 }
