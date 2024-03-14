@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function validateUser(username, password) {
-
+    
     const storedPassword = localStorage.getItem(username);
 
     return storedPassword === password;
