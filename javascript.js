@@ -1,5 +1,3 @@
-// matchaccount.js
-
 document.addEventListener('DOMContentLoaded', function () {
     const loginButton = document.querySelector('.login-button button');
 
@@ -10,19 +8,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (validateUser(usernameInput, passwordInput)) {
                 alert('Login successful!');
-            } else {
-                alert('Login successful!');
                 window.location.href = "productinventory.html";
+            } else {
+                alert('Invalid Username or Password. Please try again!');
             }
         });
     }
-
 });
 
 function validateUser(username, password) {
-    // Retrieve stored user credentials (for demonstration purposes)
-    const storedUsername = localStorage.getItem('username');
-    const storedPassword = localStorage.getItem('password');
 
-    return username === storedUsername && password === storedPassword;
+    const storedPassword = localStorage.getItem(username);
+
+    return storedPassword === password;
 }

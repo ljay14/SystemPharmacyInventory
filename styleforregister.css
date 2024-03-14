@@ -91,18 +91,18 @@ body{
     color: rgb(138, 32, 32); 
 }
 
-.login-button button{
+.create-button button{
     border-radius: 20px;
     border: 1px solid;
     height: 40px;
     width: 80px;
 }
 
-.right-container .login-button{
+.right-container .create-button{
     text-align: right;
 }
 
-.login-button button:hover{
+.create-button button:hover{
     background-color: maroon;
     color: white;
 }

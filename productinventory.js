@@ -2,11 +2,15 @@ let productIdCounter = 1; // Initial ID counter
 const products = []; // Array to store products
 const rowMap = {};
 
+
+
 function addProduct() {
     const productName = document.getElementById("productName").value;
     const quantity = document.getElementById("quantity").value;
     const unitPrice = document.getElementById("unitPrice").value;
     const expireDate = document.getElementById("expireDate").value;
+
+   
 
     // Generate unique ID
     const productId = productIdCounter++;
@@ -109,6 +113,8 @@ updateTable();
 
 function buyProduct(productId, row) {
     const productIndex = products.findIndex(product => product.id === productId);
+
+
 
     if (productIndex !== -1) {
         const availableQuantity = products[productIndex].quantity;
