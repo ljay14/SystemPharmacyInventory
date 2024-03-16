@@ -1,26 +1,21 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Check if 'currentUser' exists in localStorage
-    if (localStorage.getItem('currentUser')) {
-        // Retrieve the username of the currently logged-in user from localStorage
-        const currentUsername = JSON.parse(localStorage.getItem('currentUser')).username;
+document.addEventListener("DOMContentLoaded", function () {
+    // Retrieve user data from localStorage
+    var userDataString = localStorage.getItem("currentUser");
+    
+    if (userDataString) {
+        var userData = JSON.parse(userDataString);
+        
+        // Display user information on profile page
+        var fullNameElement = document.getElementById("fullname");
+        var usernameElement = document.getElementById("username");
+        var ageElement = document.getElementById("age");
+        var genderElement = document.getElementById("gender");
 
-        // Check if user data exists in localStorage for the current user
-        if (localStorage.getItem(currentUsername)) {
-            // Retrieve the full name and age of the user from localStorage using the username
-            const userData = JSON.parse(localStorage.getItem(currentUsername));
-            const userFullname = userData.fullname;
-            const userAge = userData.age;
-
-            // Update the corresponding HTML elements with the retrieved user information
-            document.getElementById('fullname').textContent = userFullname;
-            document.getElementById('age').textContent = userAge;
-            document.getElementById('username').textContent = currentUsername;
-        } else {
-            // Handle case where user data is not found
-            console.error('User data not found in localStorage.');
-        }
+        fullNameElement.textContent = userData.fullname;
+        usernameElement.textContent = userData.username;
+        ageElement.textContent = userData.age;
+        genderElement.textContent = userData.gender;
     } else {
-        // Handle case where currentUser is not found in localStorage
-        console.error('Current user not found in localStorage.');
+        alert("User Not Found");
     }
 });

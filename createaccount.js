@@ -1,20 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-
-    var createButton = document.querySelector(".create-button button"); // Corrected selector
+    var createButton = document.querySelector(".create-button button");
 
     // Add an event listener to the create button
     createButton.addEventListener("click", function () {
-        var fullnameInput = document.getElementById("fullname");
-        var usernameInput = document.getElementById("username");
-        var passwordInput = document.getElementById("password");
-        var ageInput = document.getElementById("age");
+        var fullnameInput = document.getElementById("fullname").value;
+        var usernameInput = document.getElementById("username").value;
+        var passwordInput = document.getElementById("password").value;
+        var ageInput = document.getElementById("age").value;
+        var genderInput = document.getElementById("gender").value;
 
-        var fullnameValue = fullnameInput.value.trim();
-        var usernameValue = usernameInput.value.trim();
-        var passwordValue = passwordInput.value.trim();
-        var ageValue = ageInput.value.trim();
+        
 
-        if (fullnameValue === "" || usernameValue === "" || passwordValue === "" || ageValue === "") {
+
+        if (fullnameInput === "" || usernameInput === "" || passwordInput === "" || ageInput === "" || genderInput === "") {
             alert("Please fill in all fields.");
             return;
         }
@@ -27,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Check if username is already taken
         var existingUser = users.find(function (user) {
-            return user.username === usernameValue;
+            return user.username === usernameInput;
         });
 
         if (existingUser) {
@@ -37,13 +35,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Add new user data to the array
         var userData = {
-            fullname: fullnameValue,
-            username: usernameValue,
-            age: ageValue
+            fullname: fullnameInput,
+            username: usernameInput,
+            age: ageInput,
+            gender: genderInput
         };
 
-        // Save username and password separately
-        localStorage.setItem(usernameValue, passwordValue); // Username as key, password as value
+        // Save username and password separately (assuming this is still your desired behavior)
+        localStorage.setItem(usernameInput, passwordInput); // Username as key, password as value
 
         users.push(userData);
 
