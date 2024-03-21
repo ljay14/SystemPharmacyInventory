@@ -23,7 +23,8 @@ function addProduct() {
     const quantity = document.getElementById("quantity").value;
     const unitPrice = document.getElementById("unitPrice").value;
     const expireDate = document.getElementById("expireDate").value;
-
+    
+    
     // Generate unique ID
     const productId = productIdCounter++;
     // Create product object
